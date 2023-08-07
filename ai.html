@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <video src=""C:\Users\HP\OneDrive\Desktop\TECH\WEB DEVELOPMENT\HTML CSS\HTML Crash Course.mp4"" autoplay controls></video>
+    <p>Enter your favorite browser name:</p>
+    <input type="text" list="browsers" name="favorite_browser">
+    <datalist id="browsers">
+     <option value="Firefox">
+     <option value="Chrome"> 
+     <option value="Internet Explorer">
+     <option value="Opera">
+     <option value="Safari">
+    </datalist>
+    <br>
+      <p>Disk Usage: <meter value="0.2">20%</meter></p>
+        <p>Total Score: <meter value="6" min="0" max="10">6 out of 10</meter></p>
+        <p>Pollution Level: <meter low="60" high="80" max="100" value="85">Very
+        High</meter></p>
+        <p>Progress: <progress id="bar" value="0" max="100"><span>0</span>%</progress></p>
+        <br>
+        <br><input type="color" value="#b97a57">
+        <input type="date" value="2020-06-08">
+        <input type="datetime" value="2020-06-09T20:35:34.32">
+        <input type="datetime-local" value="2020-06-09T22:41">
+        <input type="email" value="robert@robertnyman.com">
+        <input type="month" value="2020-06">
+        <input type="number" value="4">
+        <input type="range" value="15">
+        <!-- Note: If not set, default attribute values are min="0", max="100", step="1".
+        -->
+        <input type="search" value="[Any search text]">
+        <input type="tel" value="[Any numeric value]">
+        <!-- Note: Most web browsers seem to let through any value at this time. -->
+        <input type="time" value="22:38">
+        <input type="url" value="https://www.google.com/">
+        <!-- Note: requires a protocol like http://, ftp:// etc in the beginning. -->
+        <input type="week" value="2020-W24">
+        <br>
+        <script type="text/javascript">
+          let i = 0;
+          let progressBar = document.getElementById("bar");
+          
+          function countNumbers() {
+          if(i < 100) {
+          i = i + 1;
+          progressBar.value = i;
+          // For browsers that don't support progress tag
+          progressBar.getElementsByTagName("span")[0].textContent = i;
+          }
+          // Wait for sometime before running this script again
+          setTimeout("countNumbers()", 100);
+          }
+          countNumbers();
+          </script>
+        
+  </body>
+</html>
